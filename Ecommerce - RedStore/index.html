@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red Store</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./JS/script.js"></script>
+</head>
+<body>
+    <div class="navbar" id="home">
+        <div class="navbar-content">
+            <div id="titulo">
+                <span class="red">Red</span><span class="white">Store</span>
+            </div>
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#categorias" id="btn-categorias">Categorias</a>
+                <a href="#contato">Contato</a>
+                <a href="#sobre">Sobre</a>
+            </nav>
+            <div class="container-cart-menu">
+                <img src="./imagens/carrinho-de-compras.png" id="btnCarrinho">
+                <img src="./imagens/menu.png" class="menu-button">
+            </div>
+        </div>
+    </div>
+    <div id="mensagemAdicao" class="mensagem"></div>
+    <header>
+        <!-- Parte esquerda do banner 1 -->
+        <div class="banner-1">
+            <div id="left-banner-1">
+                <h1>Desempenho confiável, <span class="red">Design elegante!</span></h1>
+                <h3>Descubra o que um computador pode fazer por você!</h3>
+                <button class="btn-meInteressei" type="button">Me interessei &#8594;</button>
+                <div class="informações-produto-banner1">
+                    <div class="titulo-informações"><h3>Notebook Gamer - Acer Nitro 5</h3></div>
+                    <div id="borda-info"></div>
+                    <div class="especificações">
+                        <h4>Especificações</h4>
+                        <ul>
+                            <li>Processador: <br>Intel Core i7</li>
+                            <li>Sistema operacional: <br>Linux</li>
+                            <li>Memória RAM: <br>8 GB RAM DDR4 de 3200 MHz</li>
+                            <li>Tela: <br>17.3 LED com design ultra fino - 16:9</li>
+                            <li>Armazenamento: <br>512 GB SSD</li>
+                            <li>Wireless e Rede: <br>Wireless (Wi-Fi):</li>
+                        </ul>
+                            <button class="adicionar-produto" id="btn-meInteressei" type="button">Adicionar ao carrinho</button>
+                    </div>
+                </div>
+            </div>
+        <!-- Parte direita do banner 1 -->
+            <div id="right-banner-1">
+                <div class="carrinho-container">
+                    <div class="carrinho-interface">
+                        <h2 class="titulo-carrinho">Seu carrinho</h2>
+                        <div class="borda-carrinho"></div>
+                        <div class="produto-box">
+                            <table class="tabela-produtos">
+                                <thead>
+                                    <tr>
+                                        <th>Produto</th>
+                                        <th>Nome</th>
+                                        <th>Preço</th>
+                                        <th>Quantidade</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!--<tr class="produto">
+                                        <td class="imagem-produto"><img src="./imagens/banner1.png" alt="Notebook"></td>
+                                        <td class="nome-produto">Notebook Gamer - Acer Nitro 5</td>
+                                        <td class="preço-produto">R$4200,00</td>
+                                        <td><input type="number" value="1" min="1" class="quantidade"></td>
+                                        <td class="remover-produto">
+                                            <button type="button" class="botão-remover">&#128465;</button>
+                                        </td>
+                                    </tr> -->
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="footer-carrinho">
+                            <div class="total"><strong>Total: </strong><span>R$0,00</span> </div>
+                            <div class="comprar-produto">
+                                <button type="button">Comprar</button>
+                            </div>
+                        </div>
+                    </div>            
+                </div>
+                <div class="menu-categorias">
+                    <div class="container-categorias">
+                        <a href="#notebooks">Notebooks</a>
+                        <a href="#setup">Acessórios</a>
+                        <a href="#gamer">Espaço Gamer</a>
+                    </div>
+                </div>
+                <img src="./imagens/banner1.png" alt="Notebook Gamer" class="img-right-banner1">
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="banner-2">
+            <div id="produto-1">
+                <img src="./imagens/notebook_gamer_ideapad.png" alt="Notebook Gamer ideapad">
+            </div>
+            <div id="produto-2">
+                <img src="./imagens/Headset.png" alt="Fone de ouvido">
+            </div>
+            <div id="produto-3">
+                <img src="./imagens/LogoRedStore.jpg" alt="Gabinete">
+            </div>
+        </div>
+        <div class="mais-vendidos">
+            <div id="header-mv">
+                <div id="titulo-mv">
+                    <h3>Mais vendidos</h3>
+                </div>
+                <div id="borda-titulo"></div>
+            </div>
+            <div class="container-mv">
+                <div class="produto-mv">
+                    <img src="./imagens/cadeira-gamer-semBG.jpg" alt="Cadeira gamer" class="imagem-produto">
+                    <p class="nome-produto">Cadeira Gamer</p>
+                    <p class="avaliaçao">&#9733;&#9733;&#9733;&#9733;&#9734;</p>
+                    <p class="preço-produto">R$550,00</p>
+                    <button class="adicionar-produto" type="button">Adicionar ao carrinho</button>
+                </div>
+                <div class="produto-mv">
+                    <img src="./imagens/controle-ps5-removebg.png" alt="Controle PS5" class="imagem-produto">
+                    <p class="nome-produto">Controle DualSense - Black</p>
+                    <p class="avaliaçao">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                    <p class="preço-produto">R$380,00</p>
+                    <button class="adicionar-produto" type="button">Adicionar ao carrinho</button>
+                </div>
+                <div class="produto-mv">
+                    <img src="./imagens/Headset-removebg.png" alt="Headset" class="imagem-produto">
+                    <p class="nome-produto">Headphone red</p>
+                    <p class="avaliaçao">&#9733;&#9733;&#9733;&#9733;&#9734;</p>
+                    <p class="preço-produto">R$110,00</p>
+                    <button class="adicionar-produto" type="button">Adicionar ao carrinho</button>
+                </div>
+                <div class="produto-mv">
+                    <img src="./imagens/notebookGamer-removebg.png" alt="Notebook" class="imagem-produto">
+                    <p class="nome-produto">Notebook Gamer Acer Nitro 5</p>
+                    <p class="avaliaçao">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                    <p class="preço-produto">R$4200,00</p>
+                    <button class="adicionar-produto" type="button">Adicionar ao carrinho</button>
+                </div>
+            </div>
+        </div>
+        <div class="produtos-recentes">
+            <div id="header-pr">
+                <div id="titulo-pr">
+                    <h3>Últimos produtos</h3>
+                </div>
+                <div id="borda-titulo-pr"></div>
+            </div>
+            <div class="container-pr">
+                <div class="produto-mv">
+                    <img src="./imagens/product-12.png" alt="Xbox Series" class="imagem-produto">
+                    <p class="nome-produto">Xbox Series X</p>
+                    <p class="avaliaçao">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                    <p class="preço-produto">R$3400,00</p>
+                    <button class="adicionar-produto" type="button">Adicionar ao carrinho</button>
+                </div>
+                <div class="produto-mv">
+                    <img src="./imagens/product-5.png" alt="MSI GeForce gtx 1650" class="imagem-produto">
+                    <p class="nome-produto">MSI GeForce gtx 1650</p>
+                    <p class="avaliaçao">&#9733;&#9733;&#9733;&#9733;&#9734;</p>
+                    <p class="preço-produto">R$870,00</p>
+                    <button class="adicionar-produto" type="button">Adicionar ao carrinho</button>
+                </div>
+                <div class="produto-mv">
+                    <img src="./imagens/product-6.png" alt="Controle Dualsense White" class="imagem-produto">
+                    <p class="nome-produto">Controle Dualsense - White</p>
+                    <p class="avaliaçao">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                    <p class="preço-produto">R$350,00</p>
+                    <button class="adicionar-produto" type="button">Adicionar ao carrinho</button>
+                </div>
+                <div class="produto-mv teclado">
+                    <img src="./imagens/teclado-gamer-semBG.png" alt="Teclado Mecânico" class="imagem-produto">
+                    <p class="nome-produto">Teclado mecânico</p>
+                    <p class="avaliaçao">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                    <p class="preço-produto">R$115,00</p>
+                    <button class="adicionar-produto" type="button">Adicionar ao carrinho</button>
+                </div>
+            </div>
+            <div class="container-pr">
+                <div class="produto-mv">
+                    <img src="./imagens/product-2.png" alt="Notebook intel 7" class="imagem-produto">
+                    <p class="nome-produto">Notebook Intel Core - i5</p>
+                    <p class="avaliaçao">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                    <p class="preço-produto">R$2059,00</p>
+                    <button class="adicionar-produto" type="button">Adicionar ao carrinho</button>
+                </div>
+                <div class="produto-mv">
+                    <img src="./imagens/product-13.png" alt="CockPit Simulador de corrida" class="imagem-produto">
+                    <p class="nome-produto">CockPit - Simulador de corrida</p>
+                    <p class="avaliaçao">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                    <p class="preço-produto">R$1600,00</p>
+                    <button class="adicionar-produto" type="button">Adicionar ao carrinho</button>
+                </div>
+                <div class="produto-mv">
+                    <img src="./imagens/product-14.png" alt="PlayStation 5" class="imagem-produto">
+                    <p class="nome-produto">PlayStation 5</p>
+                    <p class="avaliaçao">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                    <p class="preço-produto">R$3580,00</p>
+                    <button class="adicionar-produto" type="button">Adicionar ao carrinho</button>
+                </div>
+                <div class="produto-mv">
+                    <img src="./imagens/product-15.png" alt="PC gamer" class="imagem-produto">
+                    <p class="nome-produto">PC Gamer Ryzen 7</p>
+                    <p class="avaliaçao">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                    <p class="preço-produto">R$2680,00</p>
+                    <button class="adicionar-produto" type="button">Adicionar ao carrinho</button>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <div class="notebooks" id="notebooks">
+            <div id="header-mv">
+                <div id="titulo-mv">
+                    <h3>Notebooks</h3>
+                </div>
+                <div id="borda-titulo"></div>
+            </div>
+            <div class="container-notebooks">
+                <div class="produto-mv">
+                    <img src="./imagens/product-2.png" alt="Notebook intel 7" class="imagem-produto">
+                    <p class="nome-produto">Notebook Intel Core - i5</p>
+                    <p class="avaliaçao">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                    <p class="preço-produto">R$2059,00</p>
+                    <button class="adicionar-produto" type="button">Adicionar ao carrinho</button>
+                </div>
+                <div class="produto-mv">
+                    <img src="./imagens/notebookGamer-removebg.png" alt="Notebook" class="imagem-produto">
+                    <p class="nome-produto">Notebook Gamer Acer Nitro 5</p>
+                    <p class="avaliaçao">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                    <p class="preço-produto">R$4200,00</p>
+                    <button class="adicionar-produto" type="button">Adicionar ao carrinho</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="setup" id="setup">
+            <div id="header-mv">
+                <div id="titulo-mv">
+                    <h3>Acessórios para agregar no seu setup</h3>
+                </div>
+                <div id="borda-titulo"></div>
+            </div>
+            <div class="container-acessorios-setup">
+                <div class="produto-mv">
+                    <img src="./imagens/cadeira-gamer-semBG.jpg" alt="Cadeira gamer" class="imagem-produto">
+                    <p class="nome-produto">Cadeira Gamer</p>
+                    <p class="avaliaçao">&#9733;&#9733;&#9733;&#9733;&#9734;</p>
+                    <p class="preço-produto">R$550,00</p>
+                    <button class="adicionar-produto" type="button">Adicionar ao carrinho</button>
+                </div>
+                <div class="produto-mv">
+                    <img src="./imagens/Headset-removebg.png" alt="Headset" class="imagem-produto">
+                    <p class="nome-produto">Headphone red</p>
+                    <p class="avaliaçao">&#9733;&#9733;&#9733;&#9733;&#9734;</p>
+                    <p class="preço-produto">R$110,00</p>
+                    <button class="adicionar-produto" type="button">Adicionar ao carrinho</button>
+                </div>
+                <div class="produto-mv teclado">
+                    <img src="./imagens/teclado-gamer-semBG.png" alt="Teclado Mecânico" class="imagem-produto">
+                    <p class="nome-produto">Teclado mecânico</p>
+                    <p class="avaliaçao">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                    <p class="preço-produto">R$115,00</p>
+                    <button class="adicionar-produto" type="button">Adicionar ao carrinho</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="espaço-gamer" id="gamer">
+            <div id="header-mv">
+                <div id="titulo-mv">
+                    <h3>Espaço Gamer</h3>
+                </div>
+                <div id="borda-titulo"></div>
+            </div>
+            <div class="container-gamer">
+                <div class="produto-mv">
+                    <img src="./imagens/controle-ps5-removebg.png" alt="Controle PS5" class="imagem-produto">
+                    <p class="nome-produto">Controle DualSense - Black</p>
+                    <p class="avaliaçao">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                    <p class="preço-produto">R$380,00</p>
+                    <button class="adicionar-produto" type="button">Adicionar ao carrinho</button>
+                </div>
+                <div class="produto-mv">
+                    <img src="./imagens/product-12.png" alt="Xbox Series" class="imagem-produto">
+                    <p class="nome-produto">Xbox Series X</p>
+                    <p class="avaliaçao">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                    <p class="preço-produto">R$3400,00</p>
+                    <button class="adicionar-produto" type="button">Adicionar ao carrinho</button>
+                </div>
+                <div class="produto-mv">
+                    <img src="./imagens/product-5.png" alt="MSI GeForce gtx 1650" class="imagem-produto">
+                    <p class="nome-produto">MSI GeForce gtx 1650</p>
+                    <p class="avaliaçao">&#9733;&#9733;&#9733;&#9733;&#9734;</p>
+                    <p class="preço-produto">R$870,00</p>
+                    <button class="adicionar-produto" type="button">Adicionar ao carrinho</button>
+                </div>
+                <div class="produto-mv">
+                    <img src="./imagens/product-6.png" alt="Controle Dualsense White" class="imagem-produto">
+                    <p class="nome-produto">Controle Dualsense - White</p>
+                    <p class="avaliaçao">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                    <p class="preço-produto">R$350,00</p>
+                    <button class="adicionar-produto" type="button">Adicionar ao carrinho</button>
+                </div>
+                <div class="produto-mv">
+                    <img src="./imagens/product-13.png" alt="CockPit Simulador de corrida" class="imagem-produto">
+                    <p class="nome-produto">CockPit - Simulador de corrida</p>
+                    <p class="avaliaçao">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                    <p class="preço-produto">R$1600,00</p>
+                    <button class="adicionar-produto" type="button">Adicionar ao carrinho</button>
+                </div>
+                <div class="produto-mv">
+                    <img src="./imagens/product-14.png" alt="PlayStation 5" class="imagem-produto">
+                    <p class="nome-produto">PlayStation 5</p>
+                    <p class="avaliaçao">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                    <p class="preço-produto">R$3580,00</p>
+                    <button class="adicionar-produto" type="button">Adicionar ao carrinho</button>
+                </div>
+                <div class="produto-mv">
+                    <img src="./imagens/product-15.png" alt="PC gamer" class="imagem-produto">
+                    <p class="nome-produto">PC Gamer Ryzen 7</p>
+                    <p class="avaliaçao">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                    <p class="preço-produto">R$2680,00</p>
+                    <button class="adicionar-produto" type="button">Adicionar ao carrinho</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="produto-destaque">
+            <div id="pd-img">
+                <img src="./imagens/SmartWatch.png" alt="Smart Watch">
+            </div>
+            <div id="pd-descricao">
+                <h2>Smart Watch Esportivo</h2>
+                <p>Projetado com tela Full Touch de 1,69 polegadas, superleve de 36g e espessura de 9,9 mm. <br>Fornecendo controle de toque sensível, interface personalizada e pulseira de silicone macia para a pele.<br> Tornando o relógio android/apple confortável tanto para homens quanto para mulheres.</p>
+                <button class="adicionar-produto" type="button" id="btn-produto-destaque">Adicionar ao carrinho</button>
+            </div>
+        </div>
+    </main>
+    <footer class="footer" id="footer">
+        <div class="coluna-footer">
+            <ul>
+                <h2>Links úteis</h2>
+              <li><a href="#">Perguntas Frequentes</a></li>
+              <li><a href="#">Política de Devolução</a></li>
+              <li><a href="#">Termos de Serviço</a></li>
+            </ul>
+        </div>
+        <div class="coluna-footer">
+            <ul>
+                <h3>Categorias</h3>
+                <li><a href="#">Notebooks</a></li>
+                <li><a href="#">Acessórios para completar o seu setup</a></li>
+                <li><a href="#">Acessórios Gamer</a></li>
+            </ul>
+        </div>
+        <div class="coluna-footer">
+            <ul>
+                <h3>Redes Sociais</h3>
+                <li><p>Fale conosco no Whats</p></li>
+                <br>
+                <div id="whats"><a href="#"><img src="./imagens/logo-whats.png"></a></div>
+                <br>
+                <li><p>Acompanhe a loja pelo Insta</p></li>
+                <br>
+                <div id="insta"><a href="#"><img src="./imagens/Insta.webp"></a></div>
+            </ul>
+          </div>
+          <div class="coluna-footer">
+            <h2>Sobre a loja</h2>
+            <p>A Red Store, é uma loja de produtos tecnológicos de qualidade, focados no uso diário, para trabalho ou lazer. <br>Sinta-se a vontade para procurar o prduto que deseja</p>
+          </div>
+    </footer>
+</body>
+</html>

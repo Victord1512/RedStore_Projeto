@@ -1,0 +1,1020 @@
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Open+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    margin: 0;
+}
+#titulo{
+    margin-left: 10rem;
+    margin-right: 5rem;
+    font-size: 2.7rem;
+}
+.red{
+    color: #e20a0a;
+}
+.navbar{
+    background-color: black;
+    width: 100%;
+    height: 5rem;
+    color: aliceblue;
+    position: fixed;
+    padding: 0;
+    top: 0;
+}
+.navbar > div{
+    position: relative;
+}
+.navbar-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+nav{
+    display: flex;
+    align-items: center;
+}
+nav a{
+    padding: 1.5rem;
+    text-decoration: none;
+    color: aliceblue;
+}
+nav a:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    font-size: 18px;
+}
+
+/*Carrinho e menu*/
+.container-cart-menu{
+    margin-right: 0;
+}
+.container-cart-menu img{
+    width: 2rem;
+    cursor: pointer;
+}
+.menu-button{
+    display: none;
+    cursor: pointer;
+}
+#btnCarrinho:hover{
+    transform: scale(1.1);
+}
+/*Carrinho e menu*/
+
+/*Interface do carrinho*/
+.carrinho-container .aparecer{
+    display: block;
+}
+.carrinho-container{
+    display: none;
+}
+.carrinho-interface {
+    height: 40rem;
+    background-color: #fff;
+    width: 40rem;
+    margin-top: 5rem; /* Ajuste conforme necessário */
+    border: solid 3px #e20a0a;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    right: 10px;
+    overflow-x: auto;
+}
+.imagem-produto img{
+    max-width: 100%;
+}
+
+/*Parte superior do carrinho*/
+.titulo-carrinho {
+    margin-left: 15rem;
+    margin-top: 1rem;
+    margin-bottom: 15px;
+}
+
+.borda-carrinho {
+    margin-bottom: auto;
+    height: 0.2rem;
+    width: 100%;
+    background-color: #e20a0a;
+}
+
+/*Detalhes do produto*/
+.produto-box{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.tabela-produtos {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0.5rem;
+    height: 150px;
+}
+.tabela-produtos th, .tabela-produtos td {
+    padding: 8px;
+    text-align: left;
+    width: 25%;
+    border-bottom: #000 solid 1px;
+}
+.tabela-produtos th {
+    background-color: #000;
+    color: #fff;
+}
+.tabela-produtos td {
+    background-color: #fff;
+}
+.quantidade{
+    width: 30%;
+    border: #000 2px solid;
+}
+/*Parte inferior do carrinho*/
+.footer-carrinho {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+.remover-produto button {
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+}
+
+/*Abaixo está um mecanismo para quando o usuário passar o mouse no botão de remover, aparecer uma mensagem.*/
+.botão-remover{
+    position: relative;
+    cursor: pointer;
+}
+.botão-remover:hover::after {
+    content: "Remover produto";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.5rem;
+    background-color: #000;
+    color: #fff;
+    border-radius: 4px;
+    white-space: nowrap;
+    z-index: 1;
+}
+
+.comprar-produto button{
+    margin: 0;
+    margin-right: 10px;
+    width: 6rem;
+    height: 2rem;
+    border: #e20a0a solid 2px;
+    border-top-left-radius: 8%;
+    border-top-right-radius: 8%;
+    border-bottom-left-radius: 8%;
+    border-bottom-right-radius: 8%;
+    color: white;
+    background-color:#e20a0a;
+    font-size: 1rem;
+    cursor: pointer;
+    font-family: 'Kdam Thmor Pro', sans-serif; 
+}
+.total{
+    margin-left: 10px;
+}
+
+/*Criei essa classe para poder ocultar a barra de pesquisa do carrinho*/
+.sumir{
+    display: none;
+}
+
+
+/*Responsividade do menu*/
+@media (max-width: 820px) {
+    .navbar-content{
+        display: flex;
+        justify-content: space-around;
+    }
+    #titulo{
+        font-size: 1.6rem;
+        margin-left: 1rem;
+    }
+    .container-cart-menu{
+        display: flex;
+        justify-content: right;
+        flex-direction: column;
+        margin-left: 4rem;
+    }
+    .container-cart-menu img{
+        width: 1.5rem;
+        padding: 6px;
+    }
+    .menu-button{
+        display: block; 
+    }
+    nav{
+        position: absolute;
+        background-color: #000;
+        width: 100%;
+        top: 81px;
+        right: 0rem;
+        text-align: center;
+        display: none;
+    }
+    nav a{
+        font-size: 0.7rem;
+    }
+    .show-menu nav{
+        display: block;
+    }
+
+    /*Interface do carrinho*/
+    .carrinho-interface{
+        height: 30rem;
+        width: 19rem;
+        margin-top: -15rem;
+        margin-right: 0rem;
+    }
+    .titulo-carrinho{
+        margin-left: 2rem;
+    }
+    .quantidade{
+        width: 50%;
+    }
+}
+/*Responsividade do menu*/
+
+
+
+/*Banner 1*/
+.banner-1{
+    height: 45rem;
+    background-color: rgb(209, 203, 203);
+    display: flex;
+}
+
+/*Left Banner 1*/
+#left-banner-1{
+    width: 49%;
+    display: block;
+    margin-left: 5rem;
+    margin-top: 20rem;
+}
+#left-banner-1 h1{
+    margin: 0;
+    font-size: 2.8em;
+}
+#left-banner-1 h3{
+    margin: 0;
+    margin-top: 0.5rem;
+}
+.btn-meInteressei{
+    margin: 0;
+    margin-top: 1.5rem;
+    width: 12rem;
+    height: 3rem;
+    border: #e20a0a solid 2px;
+    border-top-left-radius: 8%;
+    border-top-right-radius: 8%;
+    border-bottom-left-radius: 8%;
+    border-bottom-right-radius: 8%;
+    color: white;
+    background-color:#e20a0a;
+    font-size: 1.2rem;
+    cursor: pointer;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+}
+.btn-meInteressei:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+/*Informações do produto*/
+.informações-produto-banner1{
+    background-color: #000;
+    border: #fff 2px solid;
+    margin-left: 12rem;
+    width: 25rem;
+    height: 25rem;
+    position: absolute;
+    color: #fff;
+    overflow-y: auto;
+    padding-top: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    font-size: 15px;
+    display: none;
+}
+.informações-produto-banner1 li{
+    padding-bottom: 20px;
+}
+.informações-produto-banner1::-webkit-scrollbar {
+    width: 8px; /* Largura da barra de rolagem no Chrome, Safari e Opera */
+}
+.informações-produto-banner1::-webkit-scrollbar-thumb {
+    background-color: #e20a0a; /* Cor da alça da barra de rolagem no Chrome, Safari e Opera */
+}
+.informações-produto-banner1::-webkit-scrollbar-track {
+    background-color: #f5f5f5; /* Cor da trilha da barra de rolagem no Chrome, Safari e Opera */
+}
+.titulo-informações{
+    margin-left: 4rem;
+}
+#borda-info{
+    margin-bottom: 40px;
+    margin-top: 40px;
+    margin-left: 7rem;
+    height: 0.2rem;
+    width: 10rem;
+    background-color: #e20a0a;
+}
+.adicionar-produto{
+    margin: 0;
+    margin-bottom: 15px;
+    margin-left: 6rem;
+    width: 12rem;
+    height: 3rem;
+    border: #e20a0a solid 2px;
+    border-top-left-radius: 8%;
+    border-top-right-radius: 8%;
+    border-bottom-left-radius: 8%;
+    border-bottom-right-radius: 8%;
+    color: white;
+    background-color:#e20a0a;
+    font-size: 1rem;
+    cursor: pointer;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+}
+.adicionar-produto:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); 
+}
+.mensagem {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #e20a0a;
+    color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    display: none; /* Inicia oculto */
+}
+
+
+.especificações h4{
+    margin-left: 10px;
+}
+
+/*Right Banner 1*/
+#rigth-banner-1{
+    width: 49%;
+    position: relative;
+}
+.container-categorias{
+    width: 8.5rem;
+    height: 8rem;
+    background-color: #000;
+    position: fixed;
+    margin-top: 5rem;
+    margin-left: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container-categorias a{
+    color: #fff;
+    font-size: 15px;
+    text-decoration: none;
+    padding: 10px;
+}
+.menu-categorias{
+    display: none;
+}
+.img-right-banner1{
+    width: 60rem;
+    height: 30rem;
+    margin-top: 10rem;
+    margin-left: -5rem;
+}
+/*Banner 1*/
+
+/*Responsividade do Banner 1*/
+@media (max-width: 820px){
+    .banner-1{
+        flex-direction: column;
+        align-items: center;
+        height: 45rem;
+    }
+    #left-banner-1{
+        display: flex;
+        flex-direction: column;
+        margin-top: 10rem;
+        margin-left: 2rem; 
+        align-items: center;
+    }
+    #left-banner-1 h1{
+        font-size: 1.5rem;
+    }
+    #left-banner-1 h3{
+        font-size: 0.8em;
+    }
+    #left-banner-1 button{
+        width: 8rem;
+        height: 2.5rem;
+        font-size: 0.9rem;
+        margin-right: 6rem;
+    }
+    .informações-produto-banner1{
+        margin-left: 9rem;
+        width: 13rem;
+        height: 12rem;
+        font-size: 12px;
+        margin-top: 14rem;
+    }
+    .informações-produto-banner1 li{
+        padding-bottom: 5px;
+    }
+    .informações-produto-banner1::-webkit-scrollbar {
+        width: 5px; /* Largura da barra de rolagem no Chrome, Safari e Opera */
+    }
+    .titulo-informações{
+        margin-left: 1rem;
+        font-size: 15px;
+    }
+    #borda-info{
+        margin-bottom: 40px;
+        margin-top: 40px;
+        margin-left: 3rem;
+        height: 0.2rem;
+        width: 6rem;
+    }
+    #btn-meInteressei{
+        margin: 0;
+        margin-bottom: 15px;
+        margin-left: 2rem;
+        width: 2rem;
+        height: 0.6rem;
+        overflow: hidden;
+    }
+    .container-categorias{
+        width: 7rem;
+        margin-left: 2rem;
+        margin-top: -17.7rem;
+    }
+    .container-categorias a{
+        font-size: 12px;
+    }
+    #right-banner-1 img{
+        width: 12rem;
+        height: 10rem;
+        margin: 4rem 4rem auto auto;
+    }
+}
+/*Responsividade do Banner 1*/
+
+
+
+
+/*Banner 2*/
+.banner-2{
+    height: 30rem;
+    background-color: #000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#produto-1{
+    width: 20rem;
+    height: 20rem;
+    background-color: rgb(209, 203, 203);
+}
+#produto-1 img{
+    max-width: 90%;
+    margin-left: 1rem;
+}
+
+#produto-2{
+    width: 20rem;
+    height: 20rem;
+    background-color: rgb(209, 203, 203);
+}
+#produto-2 img{
+    max-width: 100%;
+    margin-top: 2rem;
+}
+
+#produto-3{
+    width: 20rem;
+    height: 20rem;
+    background-color: rgb(209, 203, 203);
+}
+#produto-3 img{
+    max-width: 100%;
+    margin-left: 3.7rem;
+    margin-top: 4rem;
+}
+/*Banner 2*/
+
+/*Responsividade do Banner 2*/
+@media (max-width: 820px){
+    .banner-2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 50rem;
+    }
+    #produto-1{
+        height: 15rem;
+        width: 15rem;
+    }
+    #produto-1 img{
+        max-width: 90%;
+        margin-top: 1rem;
+    }
+    #produto-2{
+        height: 15rem;
+        width: 15rem;
+    }
+    #produto-2 img{
+        max-width: 90%;
+        margin-left: 1rem;
+    }
+    #produto-3{
+        height: 15rem;
+        width: 15rem;
+    }
+    #produto-3 img{
+        max-width: 100%;
+        margin-top: 1.3rem;
+        margin-left: 1.5rem;
+    }
+}
+/*Responsividade do Banner 2*/
+
+
+
+/*Produtos mais vendidos*/
+.mais-vendidos{
+    height: 45rem;
+    background-color: rgb(209, 203, 203);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+#titulo-mv{
+    margin-top: 3rem;
+}
+.mais-vendidos h3{
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+#borda-titulo{
+    margin: 8px auto 0 auto; 
+    height: 0.2rem;
+    width: 7rem;
+    background-color: #e20a0a;
+}
+
+.container-mv{
+    display: flex;
+    margin-left: 4rem;
+    margin-top: 5.5rem;
+}
+.container-mv div{
+    margin: 0.3rem;
+    width: 20rem;
+    height: 20rem;
+    background-color: #fff;
+}
+.produto-mv img{
+    max-width: 100%;
+}
+.nome-produto{
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+p{
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+.produto-headset img{
+    max-width: 100%;
+    margin-top: 2.5rem;
+}
+.nome-produto-headset{
+    margin-top: 3.08rem;
+    font-size: 1.2rem;
+}
+.produto-notebook img{
+    max-width: 100%;
+    margin-top: 3.8rem;
+}
+.nome-produto-notebook{
+    margin-top: 3.9rem;
+    font-size: 1.2rem;
+}
+.preço-produto{
+    cursor: pointer;
+}
+.container-mv .adicionar-produto{
+    margin-left: 0;
+    margin-top: 10px;
+}
+/*Produtos mais vendidos*/
+
+
+
+/*Responsividade do mais vendidos*/
+@media(max-width: 820px){
+    .mais-vendidos{
+        height: 120rem;
+    }
+    .container-mv{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .container-mv div{
+        width: 15rem;
+        height: 15rem;
+        padding: 2rem 0 6rem 0;
+        margin-left: -3rem;
+        margin-bottom: 4rem;
+    }
+    .nome-produto{
+        font-size: 1rem;
+    }
+    .produto-mv img{
+        max-width: 90%;
+    }
+}
+/*Responsividade do mais vendidos*/
+
+
+
+/*Produtos recentes*/
+.produtos-recentes{
+    height: 71rem;
+    background-color: rgb(209, 203, 203);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 3rem;
+}
+#titulo-pr{
+    margin-top: 3rem;
+}
+.produtos-recentes h3{
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+#borda-titulo-pr{
+    margin: 8px auto 0 auto;
+    height: 0.2rem;
+    width: 7rem;
+    background-color: #e20a0a;
+}
+.container-pr{
+    display: flex;
+    margin-top: 5rem;
+}
+.container-pr div{
+    margin: 0.3rem;
+    margin-top: 2rem;
+    width: 18rem;
+    height: 18rem;
+    background-color: #fff;
+}
+.produto-pr img{
+    max-width: 100%;
+}
+.teclado img{
+    margin-top: 4rem;
+}
+.teclado .nome-produto{
+    margin-top: 4.2rem;
+}
+.container-pr:nth-of-type(3){
+    margin-top: 9rem;
+}
+.container-pr .adicionar-produto{
+    margin-left: 0;
+    margin-top: 10px;
+}
+/*Produtos recentes*/
+
+
+/*Responsividade do Recentes*/
+@media(max-width: 820px){
+    .produtos-recentes{
+        height: 120rem;
+    }
+    .container-pr{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 3.5rem;
+    }
+    .container-pr div{
+        width: 15rem;
+        height: 15rem;
+        padding: 2rem 0 6rem 0;
+        margin-left: 0;
+    }
+    .container-pr:nth-child(2){
+        display:none
+    }     
+}
+/*Responsividade do Produtos Recentes*/
+
+/*Notebooks*/
+.notebooks{
+    height: 45rem;
+    background-color: rgb(209, 203, 203);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow-y: auto;
+}
+.container-notebooks{
+    display: flex;
+    margin-left: 6rem;
+    margin-top: 5.5rem;
+}
+.container-notebooks div{
+    margin: 0.3rem;
+    width: 20rem;
+    height: 20rem;
+    background-color: #fff;
+}
+.container-notebooks .adicionar-produto{
+    margin-left: 0;
+    margin-top: 10px;
+}
+.notebooks::-webkit-scrollbar {
+    width: 2px; /* Largura da barra de rolagem no Chrome, Safari e Opera */
+}
+.notebooks::-webkit-scrollbar-thumb {
+    background-color: #e20a0a; /* Cor da alça da barra de rolagem no Chrome, Safari e Opera */
+}
+.notebooks::-webkit-scrollbar-track {
+    background-color: #f5f5f5; /* Cor da trilha da barra de rolagem no Chrome, Safari e Opera */
+}
+
+/*Responsividade do Notebooks*/
+@media(max-width: 820px){
+    .notebooks{
+        height: 40rem;
+    }
+    .container-notebooks{
+        margin-top: 5rem;
+        margin-left: 20rem;
+    }
+    .container-notebooks div{
+        width: 15rem;
+        height: 15rem;
+        padding: 2rem 0 6rem 0;
+        margin-right: 5rem;
+        margin-bottom: 2rem;
+    }
+}
+/*Responsividade do Notebooks*/
+
+/*Setup*/
+.setup{
+    height: 45rem;
+    background-color: rgb(209, 203, 203);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow-y: auto;
+}
+.container-acessorios-setup{
+    display: flex;
+    margin-left: 6rem;
+    margin-top: 5.5rem;
+}
+.container-acessorios-setup div{
+    margin: 0.3rem;
+    width: 20rem;
+    height: 20rem;
+    background-color: #fff;
+}
+.container-acessorios-setup .adicionar-produto{
+    margin-left: 0;
+    margin-top: 10px;
+}
+.setup::-webkit-scrollbar {
+    width: 2px; /* Largura da barra de rolagem no Chrome, Safari e Opera */
+}
+.setup::-webkit-scrollbar-thumb {
+    background-color: #e20a0a; /* Cor da alça da barra de rolagem no Chrome, Safari e Opera */
+}
+.setup::-webkit-scrollbar-track {
+    background-color: #f5f5f5; /* Cor da trilha da barra de rolagem no Chrome, Safari e Opera */
+}
+
+/*Responsividade do Setup*/
+@media(max-width: 820px){
+    .setup{
+        height: 40rem;
+    }
+    .container-acessorios-setup{
+        margin-left: 40rem;
+        margin-top: 5rem;
+    }
+    .container-acessorios-setup div{
+        width: 15rem;
+        height: 15rem;
+        padding: 2rem 0 6rem 0;
+        margin-right: 5rem;
+        margin-bottom: 2rem;
+    }
+}
+/*Responsividade do Setup*/
+
+/*Espaço Gamer*/
+.espaço-gamer{
+    height: 45rem;
+    background-color: rgb(209, 203, 203);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow-y: auto;
+}
+.container-gamer{
+    display: flex;
+    margin-left: 30rem;
+    margin-top: 5.5rem;
+}
+.container-gamer div{
+    margin: 0.3rem;
+    width: 20rem;
+    height: 20rem;
+    background-color: #fff;
+}
+.container-gamer .adicionar-produto{
+    margin-left: 0;
+    margin-top: 10px;
+}
+.espaço-gamer::-webkit-scrollbar {
+    width: 2px; /* Largura da barra de rolagem no Chrome, Safari e Opera */
+}
+.espaço-gamer::-webkit-scrollbar-thumb {
+    background-color: #e20a0a; /* Cor da alça da barra de rolagem no Chrome, Safari e Opera */
+}
+.espaço-gamer::-webkit-scrollbar-track {
+    background-color: #f5f5f5; /* Cor da trilha da barra de rolagem no Chrome, Safari e Opera */
+}
+
+/*Responsividade do Espaço gamer*/
+@media(max-width: 820px){
+    .espaço-gamer{
+        height: 40rem;
+        overflow-y: none;
+    }
+    .container-gamer{
+        margin-top: 5rem;
+        margin-left: 100rem;
+    }
+    .container-gamer div{
+        width: 15rem;
+        height: 15rem;
+        padding: 2rem 0 6rem 0;
+        margin-bottom: 2rem;
+        margin-right: 2rem;
+    }
+}
+/*Responsividade do Espaço gamer*/
+
+
+/*Produtos destaque*/
+.produto-destaque{
+    height: 35rem;
+    background-color: #000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#pd-img img{
+    width: 20rem;
+    height: 20rem;
+}
+#pd-descricao h2{
+    color: #fff;
+    text-align: center;
+}
+#pd-descricao p{
+    font-size: 1rem;
+    color: #fff;
+    text-align: center;
+}
+#pd-descricao button{
+    margin: 0;
+    margin-top: 1.5rem;
+    width: 12rem;
+    height: 3rem;
+    border: #e20a0a solid 2px;
+    border-top-left-radius: 8%;
+    border-top-right-radius: 8%;
+    border-bottom-left-radius: 8%;
+    border-bottom-right-radius: 8%;
+    color: white;
+    background-color:#e20a0a;
+    font-size: 1rem;
+    cursor: pointer;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    margin-left: 17rem;
+}
+/*Produtos destaque*/
+
+
+/*Responsividade do Produtos destaque*/
+@media(max-width: 820px){
+    .produto-destaque{
+        flex-direction: column;
+        justify-content: center;
+    }
+    #pd-img img{
+        width: 12rem;
+        height: 12rem;
+    }
+    #pd-descricao h2{
+        font-size: 1.2rem;
+        margin-bottom: 5rem;
+    }
+    #pd-descricao button{
+        width: 8rem;
+        height: 2.5rem;
+        font-size: 0.8rem;
+        margin-left: 2rem;
+    }
+    #pd-descricao p{
+        display: none;
+    }
+}
+/*Responsividade do Produtos destaque*/
+
+
+/*Footer*/
+.footer {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 25px;
+    background-color: rgb(209, 203, 203);
+  }
+.coluna-footer{
+    text-align: center;
+}
+#whats a>img{
+    width: 2rem;
+    height: 2rem;
+}
+#insta a>img{
+    width: 2rem;
+    height: 2rem;
+}
+li{
+    list-style-type: none;
+ }
+ a{
+    text-decoration: underline;
+    color: #000;
+ }
+.footer li>a{
+    font-size: 0.8rem;
+}
+/*Footer*/
+
+
+
+/*Responsividade do footer*/
+@media(max-width: 820px){
+    .footer{
+        grid-template-columns: repeat(1, minmax(100px, 1fr));
+        gap: 10px;
+    }
+    .coluna-footer h3{
+        font-size: 1rem;
+    }
+    .coluna-footer h2{
+        font-size: 1rem;
+    }
+    .coluna-footer p{
+        font-size: 0.8rem;
+    }
+    #whats a>img{
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    #insta a>img{
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+}
+/*Responsividade do footer*/
